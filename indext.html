@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <input type="text" name="validate" placeholder="enter age ">
+    <button type="submit" onclick="validity()" >submit</button>
+    <p id="demo"></p>
+    <script>
+   var arr=[21,43,45,50,23];
+   var arr2=[ 5, 25, 10]
+
+  
+  function myfunc(arr){
+ document.write(Math.max.apply(null,arr)+"<br>");
+
+
+
+      }//compare function for sorting numbers
+myfunc(arr);
+    var sum=arr2.reduceRight(myfun,200);
+    document.write("reduce() method ");
+    document.write(sum);
+    function myfun(total,value,index,array){
+
+        return total+value;
+    }
+    
+    var sum1=arr2.filter(myfun);
+    document.write("<br>filter() method ");
+    document.write(sum1);
+    function myfun(value,index,array){
+
+        return value > 5;
+    }
+
+
+    var sum2=arr2.map(myfun,200);
+    document.write("<br>map() method ");
+    document.write("hrllo");
+    function myfun(value,index,array){
+
+        return value + 5;
+    }
+
+    var all=arr2.every(myall);
+    function myall(value,index,array){
+        return value > 4;
+    }
+    document.write("<br>"+all);
+    
+
+function mycall(x){
+
+    document.write("<br>"+"<br>"+x);
+}
+    mycall(Math.floor(Math.random()*10)+1);
+
+    function getrndint(min,max){
+        return Math.floor(Math.random()*(max-min)+min);
+    }
+    getrndint(12,32);
+
+    mycall("<br>"+(getrndint(12,32)));
+function validity(){
+/*var age=document.getElementsByName("validate")[0].value;
+if (age >= 18) document.write("age"+age+"is valid to vote!");
+else document.write("age"+age +"is not valid for voting!");*/validity
+
+document.getElementById("demo").inneHTML="hello function";
+
+}
+
+
+    </script>
+</body>
+</html>

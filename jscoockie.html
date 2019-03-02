@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body onload="checkCookie">
+    <script> 
+    function setCookie(usrname,value,expr){
+        var d= new Date();
+        d.setTime(d.getTime()+expr*24*60*60*1000);
+        var exprs="expires="+ d.toUTCString();
+        document.cookie=usrname+"="+value+";"+exprs+";path=/";
+    }
+   function getCookie(cname){
+      var name=cname+"=";
+      var decodedCoockie=decodeURIComponent(document.cookie);
+      var ca= decodedCoockie.split(";");
+
+     for(var i=0;i<ca.length;i++){
+      c=ca[i];
+      while(c.charAt[0] == ''){
+          c= c.substring(1);
+      }
+
+      if(c.indexOf(name) == 0){
+           return c.substring(name.length,c.length);
+
+      }else
+      return "";
+
+
+
+
+
+     }
+
+
+
+
+   }
+
+   function checkCookie(){
+
+
+       var usrname= getCookie("username");
+   if(username != ""){
+          alert("welcome again" +username );
+
+   }
+   else{
+      username= prompt("Enter username","");
+      if(username !=""&& username!= null)
+      {
+          setCookie("username",username,365);
+      }
+   }
+
+
+   }
+   
+    
+    
+    </script>
+</body>
+</html>

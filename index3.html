@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    .a{
+        border: 5px solid gray;
+        height:200px;
+        width:300px;
+   float:right;
+    }
+    .b{
+        border: 5px solid green;
+        height:200px;
+        width:300px;
+        float:left;
+    }
+    body{
+        box-sizing: border-box;
+    }
+    .container{
+        border: 1px solid red;
+    
+    }
+    .clearfix::after{
+        content:"";
+        clear:both;
+        display:table;
+    }
+    @media screen and (min-width:800px){
+        .a,.b{
+            width:100%;
+        }
+    }
+    </style>
+</head>
+<body>
+<div class="clearfix" >
+<div class="a">
+
+</div>
+<div class="b">
+    
+</div>
+<div class="b">
+    
+    </div><div class="b">
+    
+        </div>
+
+</div>
+
+<form action="#"><fieldset><legend>this is fieldset</legend>
+    <input type="submit" name="submit" value="send">
+</fieldset>
+
+
+<input list="browse"  name="browse">
+<datalist id="browse">
+    <option value="shot1"></option>
+    <option value="shot2"></option>
+    <option value="shot3"></option>
+</datalist>
+<input type="range" value="25">
+
+select a file<input type="file" name="mufile">
+input password
+<input type="password" pattern=".{6,8}">
+<input type="submit" value="submit">
+</form>
+<iframe width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+</iframe>
+
+
+</body>
+</html>
